@@ -59,7 +59,7 @@ root.simpleDatatables = ( sSource, aoData, fnCallback ) ->
   );
 
   data.push({name: "sEcho", value: sEcho});
-  data.push({name: "page", value: iDisplayStart/iDisplayLength + 1});
+  data.push({name: "page", value: Math.floor(iDisplayStart/iDisplayLength + 1)});
   data.push({name: "per_page", value: iDisplayLength});
   data.push({name: "search[meta_sort]", value: sortcolumns[0]});
 
